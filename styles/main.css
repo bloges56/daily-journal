@@ -1,0 +1,4 @@
+.journal-section {
+    display: flex;
+    flex-flow: column;
+}
