@@ -6,7 +6,7 @@ export const JournalEntryList = () => {
     const journalEntries = useJournalEntries();
 
     var entriesHTML = "";
-    journalEntries.forEach(entry => {
+    journalEntries.map(entry => {
         entriesHTML += JournalEntry(entry);
     });
 
