@@ -1,27 +1,13 @@
 // This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "07/24/2025",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "happy"
-    },
-    {
-        id: 2,
-        date: "07/30/2025",
-        concept: "Javascript",
-        entry: "Learned how to automate html",
-        mood: "scared"
-    },
-    {
-        id: 3,
-        date: "07/34/2025",
-        concept: "React",
-        entry: "Learned the basics of using react",
-        mood: "disgusted"
-    }
-]
+var journal = []
+
+export const getEntries = () => {
+    return fetch("http://localhost:8088/entries") // Fetch from the API
+        .then(response => response.json())  // Parse as JSON
+        .then(entries => {
+            journal = entries
+        })
+}
 
 /*
     You export a function that provides a version of the
