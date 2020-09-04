@@ -76,6 +76,13 @@
       "entry": "dusted",
       "mood": "happy",
       "id": 11
+    },
+    {
+      "date": "2020-09-08",
+      "concept": "testing reset",
+      "entry": "blah",
+      "mood": "angry",
+      "id": 12
     }
   ]
 }
