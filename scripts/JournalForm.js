@@ -1,3 +1,30 @@
+import { saveJournalEntry } from './JournalEntryProvider.js'
+
+const eventHub = document.querySelector('#container');
+
+eventHub.addEventListener('click', event => {
+    if(event.target.id === "saveForm"){
+
+        var date = document.querySelector('#journal-date')
+        var concept = document.querySelector('#journal-concepts')
+        var entry = document.querySelector('#journal-entry')
+        var mood = document.querySelector('#journal-mood')
+
+        const newJournalEntry = {
+            "date": date.value,
+            "concept": concept.value,
+            "entry": entry.value,
+            "mood": mood.value
+        }
+
+        saveJournalEntry(newJournalEntry);
+
+        concept.value = ""
+        entry.value = ""
+    }
+})
+
+
 export const JournalForm = () => {
     const contentTarget = document.querySelector('#new-form')
 
@@ -28,7 +55,7 @@ export const JournalForm = () => {
                     <option value="stressed">Stressed</option>
                 </select>
             </fieldset>
-            <input type="submit" value="Creat New Form">
         </form>
+        <button id="saveForm">Save Form</button>
     `
 }
