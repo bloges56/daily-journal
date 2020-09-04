@@ -1,25 +1,32 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "07/24/2025",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "happy"
-        },
-        {
-            "id": 2,
-            "date": "07/30/2025",
-            "concept": "Javascript",
-            "entry": "Learned how to automate html",
-            "mood": "scared"
-        },
-        {
-            "id": 3,
-            "date": "07/34/2025",
-            "concept": "React",
-            "entry": "Learned the basics of using react",
-            "mood": "disgusted"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "07/24/2025",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "happy"
+    },
+    {
+      "id": 2,
+      "date": "07/30/2025",
+      "concept": "Javascript",
+      "entry": "Learned how to automate html",
+      "mood": "scared"
+    },
+    {
+      "id": 3,
+      "date": "07/34/2025",
+      "concept": "React",
+      "entry": "Learned the basics of using react",
+      "mood": "disgusted"
+    },
+    {
+      "date": "2020-09-11",
+      "concept": "hello",
+      "entry": "hello again",
+      "mood": "sad",
+      "id": 4
+    }
+  ]
 }
