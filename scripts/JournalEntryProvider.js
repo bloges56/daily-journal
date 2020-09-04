@@ -21,6 +21,8 @@ export const useJournalEntries = () => {
     return sortedByDate
 }
 
+const eventHub = document.querySelector('#container');
+
 const dispatchStateChangeEvent = () => {
     eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
 }
