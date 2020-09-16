@@ -1,4 +1,5 @@
 import { saveJournalEntry } from './JournalEntryProvider.js'
+import { getMoods, useMoods } from './JournalMoodProvider.js'
 
 const eventHub = document.querySelector('#container');
 
@@ -14,7 +15,7 @@ eventHub.addEventListener('click', event => {
             "date": date.value,
             "concept": concept.value,
             "entry": entry.value,
-            "mood": mood.value
+            "moodID": mood.value
         }
 
         saveJournalEntry(newJournalEntry);
@@ -28,7 +29,10 @@ eventHub.addEventListener('click', event => {
 export const JournalForm = () => {
     const contentTarget = document.querySelector('#new-form')
 
-    contentTarget.innerHTML = `
+    getMoods()
+    .then(_ => {
+        const moods = useMoods()
+        contentTarget.innerHTML = `
         <h2>New Journal Entry</h2>
         <form action="">
             <fieldset class="journal-section" id="journal-date-cont">
@@ -46,16 +50,15 @@ export const JournalForm = () => {
             <fieldset class="journal-section" id="journal-mood-cont">
                 <label for="journal-mood">Mood for the day</label>
                 <select name="journal-mood" id="journal-mood">
-                    <option value="sad">Sad</option>
-                    <option value="angry">Angry</option>
-                    <option value="happy">Happy</option>
-                    <option value="proud">Proud</option>
-                    <option value="scared">Scared</option>
-                    <option value="disgusted">Disgusted</option>
-                    <option value="stressed">Stressed</option>
+                   ${moods.map(mood => {
+                       return `<option id="${mood.mood}" value=${mood.id}>${mood.mood}</option>`
+                   }).sort().join("")}
+                    
                 </select>
             </fieldset>
         </form>
         <button id="saveForm">Save Form</button>
     `
+    })
+    
 }
