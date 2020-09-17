@@ -1,6 +1,5 @@
 import { JournalEntry } from './JournalEntry.js'
-import { useJournalEntries, getEntries } from './JournalEntryProvider.js'
-import { getMoods, useMoods } from './JournalMoodProvider.js'
+import { useJournalEntries, getEntries, deleteJournalEntry } from './JournalEntryProvider.js'
 
 const contentElement = document.querySelector("#journal-entries");
 
@@ -32,4 +31,11 @@ eventHub.addEventListener('journalStateChanged', event => {
         const journalEntries = useJournalEntries();
         render(journalEntries)
     })
+})
+
+eventHub.addEventListener("click", event => {
+    if(event.target.id.startsWith("deleteEntry--")){
+        const [prefix, id] = event.target.id.split("--")
+        deleteJournalEntry(id)
+    }
 })

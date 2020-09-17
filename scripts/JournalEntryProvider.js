@@ -27,6 +27,14 @@ const dispatchStateChangeEvent = () => {
     eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
 }
 
+export const deleteJournalEntry = (journalID) => {
+    return fetch(`http://localhost:8088/entries/${journalID}`, {
+        method: "DELETE"
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
+}
+
 export const saveJournalEntry = (newJournalEntry) => {
     // Use `fetch` with the POST method to add your entry to your API
     fetch("http://localhost:8088/entries", {

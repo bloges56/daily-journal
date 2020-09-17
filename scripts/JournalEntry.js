@@ -5,6 +5,7 @@ export const JournalEntry = (entry) => {
             <h3>${entry.mood.mood}</h3>
             <p class="entry-content">${entry.entry}<p>
             <div class="entry-date">${entry.date}</div>
+            <button id="deleteEntry--${entry.id}">Delete</button>
         </div>
     `      
 };
