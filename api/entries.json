@@ -1,20 +1,5 @@
 {
-  "entries": [
-    {
-      "date": "2020-09-17",
-      "concept": "test",
-      "entry": "testing",
-      "moodId": 1,
-      "id": 1
-    },
-    {
-      "date": "2020-09-26",
-      "concept": "entities",
-      "entry": "hello",
-      "moodId": 5,
-      "id": 2
-    }
-  ],
+  "entries": [],
   "moods": [
     {
       "id": 1,
