@@ -15,19 +15,13 @@ export const JournalEntryList = () => {
 };
 
 const render = (journalEntries) => {
-    getMoods()
-    .then(_ => {
-        const moods = useMoods()
-        var entriesHTML = "";
-        journalEntries.map(entry => {
-            const foundMood = moods.find(mood => {
-                return mood.id.toString() === entry.moodID
-            })
-            entriesHTML += JournalEntry(entry, foundMood);
-        });
-
-        contentElement.innerHTML = entriesHTML;
-    })
+    
+    var entriesHTML = "";
+    journalEntries.map(entry => {
+        entriesHTML += JournalEntry(entry);
+    });
+    contentElement.innerHTML = entriesHTML;   
+     
 }
 
 const eventHub = document.querySelector('#container');
