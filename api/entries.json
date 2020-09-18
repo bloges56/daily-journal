@@ -1,5 +1,34 @@
 {
-  "entries": [],
+  "entries": [
+    {
+      "date": "2020-09-18",
+      "concept": "testing mood",
+      "entry": "1",
+      "moodId": 3,
+      "id": 1
+    },
+    {
+      "date": "2020-09-19",
+      "concept": "testing mood",
+      "entry": "2",
+      "moodId": 5,
+      "id": 2
+    },
+    {
+      "date": "2020-09-20",
+      "concept": "testing mood",
+      "entry": "3",
+      "moodId": 1,
+      "id": 3
+    },
+    {
+      "date": "2020-09-21",
+      "concept": "testing mood",
+      "entry": "3",
+      "moodId": 2,
+      "id": 4
+    }
+  ],
   "moods": [
     {
       "id": 1,

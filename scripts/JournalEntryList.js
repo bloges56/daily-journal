@@ -39,3 +39,17 @@ eventHub.addEventListener("click", event => {
         deleteJournalEntry(id)
     }
 })
+
+eventHub.addEventListener('moodSelected', event => {
+    if("moodId" in event.detail){
+        getEntries()
+        .then(_ => {
+            const entries = useJournalEntries()
+            const moodEntries = entries.filter(entry => {
+                return entry.moodId === event.detail.moodId
+            })
+            debugger;
+            render(moodEntries)
+        })
+    }
+})
