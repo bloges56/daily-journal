@@ -1,5 +1,20 @@
 {
-  "entries": [],
+  "entries": [
+    {
+      "date": "2020-09-20",
+      "concept": "testing",
+      "entry": "test test",
+      "moodId": 3,
+      "id": 2
+    },
+    {
+      "date": "2020-09-23",
+      "concept": "test again",
+      "entry": "hello hello",
+      "moodId": 4,
+      "id": 3
+    }
+  ],
   "moods": [
     {
       "id": 1,

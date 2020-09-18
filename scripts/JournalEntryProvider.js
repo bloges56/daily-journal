@@ -23,7 +23,7 @@ export const useJournalEntries = () => {
 
 const eventHub = document.querySelector('#container');
 
-const dispatchStateChangeEvent = () => {
+export const dispatchStateChangeEvent = () => {
     eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
 }
 

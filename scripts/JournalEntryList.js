@@ -10,7 +10,6 @@ export const JournalEntryList = () => {
         const journalEntries = useJournalEntries();
         render(journalEntries)
     })
-    
 };
 
 const render = (journalEntries) => {
@@ -26,10 +25,31 @@ const render = (journalEntries) => {
 const eventHub = document.querySelector('#container');
 
 eventHub.addEventListener('journalStateChanged', event => {
+
     getEntries()
     .then(_ => {
+        const radios = document.getElementsByName('mood-filter')
+        let selectedRadio
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+              // do whatever you want with the checked radio
+              selectedRadio = radios[i]
+          
+              // only one radio can be logically checked, don't check the rest
+              break;
+            }
+        }
         const journalEntries = useJournalEntries();
-        render(journalEntries)
+        if(selectedRadio !== undefined){
+            const [radio, mood, moodId] = selectedRadio.id.split("--")
+            const moodEntries = journalEntries.filter(entry => {
+                return entry.moodId === parseInt(moodId)
+            })
+            render(moodEntries)
+        }
+        else{
+            render(journalEntries)
+        }
     })
 })
 
@@ -39,3 +59,4 @@ eventHub.addEventListener("click", event => {
         deleteJournalEntry(id)
     }
 })
+
