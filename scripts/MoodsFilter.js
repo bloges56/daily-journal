@@ -1,17 +1,9 @@
 import { getMoods, useMoods } from './JournalMoodProvider.js'
+import { dispatchStateChangeEvent } from './JournalEntryProvider.js'
 
 const contentTarget = document.querySelector("#mood-filter-container")
 
 const eventHub = document.querySelector('#container')
-
-const dispatchMoodEvent = (mood) => {
-    const moodEvent = new CustomEvent("moodSelected", {
-        detail: {
-            moodId: mood
-        }
-    })
-    eventHub.dispatchEvent(moodEvent)
-}
 
 getMoods()
 .then(_ => {
@@ -31,8 +23,7 @@ getMoods()
     `
     eventHub.addEventListener("change", event => {
         if(event.target.name === "mood-filter"){
-            const [radio, mood, moodId] = event.target.id.split("--")
-            dispatchMoodEvent(parseInt(moodId))
+            dispatchStateChangeEvent()
         }
     })
 })
