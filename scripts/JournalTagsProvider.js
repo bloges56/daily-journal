@@ -12,7 +12,6 @@ export const checkTag = (tag) => {
             })
         }
         else{
-            debugger;
             let copy = parsedResponse.slice()
             return copy[0].id
         }

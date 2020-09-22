@@ -33,7 +33,6 @@ eventHub.addEventListener('click', event => {
             tagsObjects.forEach(tagObject => {
                 checkTag(tagObject)
                 .then(tagId => {   
-                    debugger;
                     const newEntryTag = {
                         "entryId": entryId,
                         "tagId": tagId
