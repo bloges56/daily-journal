@@ -5,7 +5,7 @@ export const getEntries = () => {
     return fetch("http://localhost:8088/entries?_expand=mood") // Fetch from the API
         .then(response => response.json())  // Parse as JSON
         .then(entries => {
-            journal = entries
+            journal = entries.slice()
         })
 }
 
@@ -37,13 +37,24 @@ export const deleteJournalEntry = (journalID) => {
 
 export const saveJournalEntry = (newJournalEntry) => {
     // Use `fetch` with the POST method to add your entry to your API
-    fetch("http://localhost:8088/entries", {
+    return fetch("http://localhost:8088/entries", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(newJournalEntry)
     })
-        .then(getEntries)  // <-- Get all journal entries
-        .then(dispatchStateChangeEvent)  // <-- Broadcast the state change event
+        .then(response => response.json())
+        .then(parsedResponse => parsedResponse.id)
+        .then(entryId => {
+            getEntries()
+            return entryId
+        })  // <-- Get all journal entries
+        .then(entryId => {
+            dispatchStateChangeEvent()
+            return entryId
+        })  // <-- Broadcast the state change event
+        .then(entryId =>{
+            return entryId
+        })
 }

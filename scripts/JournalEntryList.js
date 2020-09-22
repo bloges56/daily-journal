@@ -1,5 +1,6 @@
 import { JournalEntry } from './JournalEntry.js'
 import { useJournalEntries, getEntries, deleteJournalEntry } from './JournalEntryProvider.js'
+import { getEntryTags, useEntryTags } from './JournalEntryTagsProvider.js'
 
 const contentElement = document.querySelector("#journal-entries");
 
@@ -16,10 +17,15 @@ const render = (journalEntries) => {
     
     var entriesHTML = "";
     journalEntries.map(entry => {
-        entriesHTML += JournalEntry(entry);
-    });
-    contentElement.innerHTML = entriesHTML;   
-     
+        getEntryTags(entry.id)
+        .then(_ => {
+            const entryTags = useEntryTags()
+            entriesHTML += JournalEntry(entry, entryTags);
+        })
+        .then(_ =>{
+            contentElement.innerHTML = entriesHTML;
+        })
+    }) 
 }
 
 const eventHub = document.querySelector('#container');

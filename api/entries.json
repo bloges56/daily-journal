@@ -1,20 +1,5 @@
 {
-  "entries": [
-    {
-      "date": "2020-09-20",
-      "concept": "testing",
-      "entry": "test test",
-      "moodId": 3,
-      "id": 2
-    },
-    {
-      "date": "2020-09-23",
-      "concept": "test again",
-      "entry": "hello hello",
-      "moodId": 4,
-      "id": 3
-    }
-  ],
+  "entries": [],
   "moods": [
     {
       "id": 1,
@@ -36,5 +21,52 @@
       "id": 5,
       "mood": "disgusted"
     }
-  ]
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "subject": "API"
+    },
+    {
+      "id": 2,
+      "subject": "components"
+    },
+    {
+      "id": 3,
+      "subject": "fetch"
+    },
+    {
+      "id": 4,
+      "subject": "events"
+    },
+    {
+      "id": 5,
+      "subject": "array-methods"
+    },
+    {
+      "subject": "delete",
+      "id": 6
+    },
+    {
+      "subject": "add",
+      "id": 7
+    },
+    {
+      "subject": "edit",
+      "id": 8
+    },
+    {
+      "subject": "providers",
+      "id": 9
+    },
+    {
+      "subject": "new",
+      "id": 10
+    },
+    {
+      "subject": "",
+      "id": 11
+    }
+  ],
+  "entrytags": []
 }

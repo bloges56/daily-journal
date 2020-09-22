@@ -1,5 +1,7 @@
 import { saveJournalEntry } from './JournalEntryProvider.js'
 import { getMoods, useMoods } from './JournalMoodProvider.js'
+import { checkTag } from './JournalTagsProvider.js'
+import { saveEntryTag } from './JournalEntryTagsProvider.js'
 
 const eventHub = document.querySelector('#container');
 
@@ -10,6 +12,7 @@ eventHub.addEventListener('click', event => {
         var concept = document.querySelector('#journal-concepts')
         var entry = document.querySelector('#journal-entry')
         var mood = document.querySelector('#journal-mood')
+        var tags = document.querySelector('#journal-tags')
 
         const newJournalEntry = {
             "date": date.value,
@@ -18,10 +21,32 @@ eventHub.addEventListener('click', event => {
             "moodId": parseInt(mood.value)
         }
 
-        saveJournalEntry(newJournalEntry);
+        const tagsArray = tags.value.split(",")
+        const tagsObjects = tagsArray.map(tag => {
+            return {
+                "subject": tag
+            }
+        })
+
+        saveJournalEntry(newJournalEntry)
+        .then(entryId => {
+            tagsObjects.forEach(tagObject => {
+                checkTag(tagObject)
+                .then(tagId => {   
+                    const newEntryTag = {
+                        "entryId": entryId,
+                        "tagId": tagId
+                    }
+                    saveEntryTag(newEntryTag)
+                }) 
+            })
+        })
+
+        
 
         concept.value = ""
         entry.value = ""
+        tags.value = ""
     }
 })
 
@@ -55,6 +80,10 @@ export const JournalForm = () => {
                    }).sort().join("")}
                     
                 </select>
+            </fieldset>
+            <fieldset class="journal-section" id="journal-tags-cont">
+                <label for="journal-tags">Enter Tags:</label>
+                <input name="journal-tags" id="journal-tags">
             </fieldset>
         </form>
         <button id="saveForm">Save Form</button>
