@@ -20,7 +20,6 @@ const render = (journalEntries) => {
         getEntryTags(entry.id)
         .then(_ => {
             const entryTags = useEntryTags()
-            debugger;
             entriesHTML += JournalEntry(entry, entryTags);
         })
         .then(_ =>{

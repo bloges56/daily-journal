@@ -31,11 +31,6 @@ export const deleteJournalEntry = (journalID) => {
     return fetch(`http://localhost:8088/entries/${journalID}`, {
         method: "DELETE"
     })
-    .then(_ => {
-        return fetch(`http://localhost:8088/entrytags?entryId=${journalID}`, {
-            method: "DELETE"
-        })
-    })
     .then(getEntries)
     .then(dispatchStateChangeEvent)
 }
