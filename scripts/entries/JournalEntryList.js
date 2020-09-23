@@ -1,6 +1,6 @@
 import { JournalEntry } from './JournalEntry.js'
 import { useJournalEntries, getEntries, deleteJournalEntry } from './JournalEntryProvider.js'
-import { getEntryTags, useEntryTags } from './JournalEntryTagsProvider.js'
+import { getEntryTags, useEntryTags } from '../tags/JournalEntryTagsProvider.js'
 
 const contentElement = document.querySelector("#journal-entries");
 
@@ -20,6 +20,7 @@ const render = (journalEntries) => {
         getEntryTags(entry.id)
         .then(_ => {
             const entryTags = useEntryTags()
+            debugger;
             entriesHTML += JournalEntry(entry, entryTags);
         })
         .then(_ =>{

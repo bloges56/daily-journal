@@ -1,7 +1,7 @@
-import { saveJournalEntry } from './JournalEntryProvider.js'
-import { getMoods, useMoods } from './JournalMoodProvider.js'
-import { checkTag } from './JournalTagsProvider.js'
-import { saveEntryTag } from './JournalEntryTagsProvider.js'
+import { saveJournalEntry } from './entries/JournalEntryProvider.js'
+import { getMoods, useMoods } from './moods/JournalMoodProvider.js'
+import { checkTag } from './tags/JournalTagsProvider.js'
+import { saveEntryTag } from './tags/JournalEntryTagsProvider.js'
 
 const eventHub = document.querySelector('#container');
 

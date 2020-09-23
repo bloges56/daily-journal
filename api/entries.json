@@ -1,5 +1,13 @@
 {
-  "entries": [],
+  "entries": [
+    {
+      "date": "2020-09-24",
+      "concept": "testing delete",
+      "entry": "hello",
+      "moodId": 3,
+      "id": 1
+    }
+  ],
   "moods": [
     {
       "id": 1,
@@ -68,5 +76,11 @@
       "id": 11
     }
   ],
-  "entrytags": []
+  "entrytags": [
+    {
+      "entryId": 1,
+      "tagId": 1,
+      "id": 1
+    }
+  ]
 }

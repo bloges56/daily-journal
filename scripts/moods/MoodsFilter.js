@@ -1,5 +1,5 @@
 import { getMoods, useMoods } from './JournalMoodProvider.js'
-import { dispatchStateChangeEvent } from './JournalEntryProvider.js'
+import { dispatchStateChangeEvent } from '../entries/JournalEntryProvider.js'
 
 const contentTarget = document.querySelector("#mood-filter-container")
 
