@@ -2,6 +2,7 @@ import { JournalEntry } from './JournalEntry.js'
 import { useJournalEntries, getEntries, deleteJournalEntry } from './JournalEntryProvider.js'
 import { getEntryTags, useEntryTags } from '../tags/JournalEntryTagsProvider.js'
 
+//testing github push
 const contentElement = document.querySelector("#journal-entries");
 
 export const JournalEntryList = () => {
