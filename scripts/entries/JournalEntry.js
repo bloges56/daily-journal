@@ -9,7 +9,7 @@ export const JournalEntry = (entry, entryTags) => {
                 <h4>Tags</h4>
                 ${entryTags.map(entryTag => {
                     return `<div class="tag">
-                        ${entryTag}
+                        ${entryTag.tag.subject}
                     </div>`
                 }).sort().join("")}
             </div>

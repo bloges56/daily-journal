@@ -1,25 +1,29 @@
+import { useSavedTags, saveTags } from './JournalTagsProvider.js'
+import { useSavedEntry, saveJournalEntry} from '../entries/JournalEntryProvider.js'
+
 let entryTags = []
 
-export const saveEntryTag = (entryTag) => {
-    return fetch("http://localhost:8088/entrytags", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(entryTag)
+export const saveEntryTag = (entry, tags) => {
+    const entrySaved = saveJournalEntry(entry)
+    const tagsSaved = saveTags(tags)
+
+    Promise.all([entrySaved, tagsSaved])
+    .then(_ => {
+       const savedEntry = useSavedEntry()
+       const savedTags = useSavedTags()
+       debugger;
     })
 }
+
 
 export const useEntryTags = () => {
     return entryTags.slice()
 }
 
-export const getEntryTags = (entryId) => {
-    return fetch(`http://localhost:8088/entrytags?entryId=${entryId}&_expand=tag`)
+export const getEntryTags = () => {
+    return fetch(`http://localhost:8088/entrytags?&_expand=tag&_expand=user`)
     .then(response => response.json())
     .then(parsedResponse => {
-        entryTags = parsedResponse.map(entryTag => {
-            return entryTag.tag.subject
-        })
+        entryTags = parsedResponse
     })
 }

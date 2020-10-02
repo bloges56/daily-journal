@@ -1,5 +1,6 @@
 // This is the original data.
 var journal = []
+let savedEntry = {}
 
 export const getEntries = () => {
     return fetch("http://localhost:8088/entries?_expand=mood") // Fetch from the API
@@ -45,16 +46,28 @@ export const saveJournalEntry = (newJournalEntry) => {
         body: JSON.stringify(newJournalEntry)
     })
         .then(response => response.json())
-        .then(parsedResponse => parsedResponse.id)
-        .then(entryId => {
-            getEntries()
-            return entryId
-        })  // <-- Get all journal entries
-        .then(entryId => {
-            dispatchStateChangeEvent()
-            return entryId
-        })  // <-- Broadcast the state change event
-        .then(entryId =>{
-            return entryId
+        .then(entry => {
+            savedEntry = entry
         })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
+        // .then(response => response.json())
+        // .then(parsedResponse => parsedResponse.id)
+        // .then(entryId => {
+        //     getEntries()
+        //     return entryId
+        // })  // <-- Get all journal entries
+        // .then(entryId => {
+        //     dispatchStateChangeEvent()
+        //     return entryId
+        // })  // <-- Broadcast the state change event
+        // .then(entryId =>{
+        //     return entryId
+        // })
+}
+
+export const useSavedEntry = () => {
+    const returnEntry = {}
+    Object.assign(returnEntry, savedEntry)
+    return returnEntry
 }

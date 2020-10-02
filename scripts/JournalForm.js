@@ -1,6 +1,5 @@
 import { saveJournalEntry } from './entries/JournalEntryProvider.js'
 import { getMoods, useMoods } from './moods/JournalMoodProvider.js'
-import { checkTag } from './tags/JournalTagsProvider.js'
 import { saveEntryTag } from './tags/JournalEntryTagsProvider.js'
 
 const eventHub = document.querySelector('#container');
@@ -28,21 +27,7 @@ eventHub.addEventListener('click', event => {
             }
         })
 
-        saveJournalEntry(newJournalEntry)
-        .then(entryId => {
-            tagsObjects.forEach(tagObject => {
-                checkTag(tagObject)
-                .then(tagId => {   
-                    const newEntryTag = {
-                        "entryId": entryId,
-                        "tagId": tagId
-                    }
-                    saveEntryTag(newEntryTag)
-                }) 
-            })
-        })
-
-        
+        saveEntryTag(newJournalEntry, tagsObjects)
 
         concept.value = ""
         entry.value = ""
