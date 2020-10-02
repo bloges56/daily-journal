@@ -50,20 +50,6 @@ export const saveJournalEntry = (newJournalEntry) => {
             savedEntry = entry
         })
         .then(getEntries)
-        .then(dispatchStateChangeEvent)
-        // .then(response => response.json())
-        // .then(parsedResponse => parsedResponse.id)
-        // .then(entryId => {
-        //     getEntries()
-        //     return entryId
-        // })  // <-- Get all journal entries
-        // .then(entryId => {
-        //     dispatchStateChangeEvent()
-        //     return entryId
-        // })  // <-- Broadcast the state change event
-        // .then(entryId =>{
-        //     return entryId
-        // })
 }
 
 export const useSavedEntry = () => {

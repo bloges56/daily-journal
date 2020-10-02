@@ -167,6 +167,41 @@
       "entry": "totes mcgoats",
       "moodId": 3,
       "id": 24
+    },
+    {
+      "date": "2020-10-10",
+      "concept": "savedTagObjects",
+      "entry": "blah blah blah",
+      "moodId": 3,
+      "id": 25
+    },
+    {
+      "date": "2020-10-15",
+      "concept": "saving tags",
+      "entry": "yo yo",
+      "moodId": 3,
+      "id": 26
+    },
+    {
+      "date": "2020-10-10",
+      "concept": "creating entryTags",
+      "entry": "cool cool cool",
+      "moodId": 3,
+      "id": 27
+    },
+    {
+      "date": "2020-10-09",
+      "concept": "try again",
+      "entry": "cool world was underrated",
+      "moodId": 1,
+      "id": 28
+    },
+    {
+      "date": "2020-10-10",
+      "concept": "testing save entrytags",
+      "entry": "hello there",
+      "moodId": 3,
+      "id": 29
     }
   ],
   "moods": [
@@ -299,6 +334,50 @@
     {
       "subject": "up",
       "id": 27
+    },
+    {
+      "subject": "blah",
+      "id": 28
+    },
+    {
+      "subject": "yo",
+      "id": 29
+    },
+    {
+      "subject": "there",
+      "id": 30
+    },
+    {
+      "subject": "because",
+      "id": 31
+    },
+    {
+      "subject": "woo",
+      "id": 32
+    },
+    {
+      "subject": "happy",
+      "id": 33
+    },
+    {
+      "subject": "daddy",
+      "id": 34
+    },
+    {
+      "subject": "tag",
+      "id": 35
+    },
+    {
+      "subject": "for",
+      "id": 36
+    },
+    {
+      "subject": "the",
+      "id": 37
+    },
+    {
+      "subject": "memories",
+      "id": 38
     }
   ],
   "entrytags": [
@@ -351,6 +430,31 @@
       "entryId": 6,
       "tagId": 9,
       "id": 10
+    },
+    {
+      "entryId": 29,
+      "tagId": 1,
+      "id": 11
+    },
+    {
+      "entryId": 29,
+      "tagId": 35,
+      "id": 12
+    },
+    {
+      "entryId": 29,
+      "tagId": 36,
+      "id": 13
+    },
+    {
+      "entryId": 29,
+      "tagId": 37,
+      "id": 14
+    },
+    {
+      "entryId": 29,
+      "tagId": 38,
+      "id": 15
     }
   ]
 }
