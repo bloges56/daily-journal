@@ -23,14 +23,10 @@ const renderHelper = (entries, entryTags) => {
 
 const render = () => {
 
-    const fetchEntries = fetch('http://localhost:8088/entries?_expand=mood')
-    const fetchEntryTags = fetch(`http://localhost:8088/entrytags?&_expand=tag&_expand=entry`)
-
-    Promise.all([fetchEntries, fetchEntryTags])
-    .then(values => {
-        return Promise.all(values.map(r => r.json()))
-    })
-    .then(([entries, entryTags]) => {
+    Promise.all([getEntries(), getEntryTags()])
+    .then(( _ ) => {
+        const entries = useJournalEntries()
+        const entryTags = useEntryTags()
         const radios = document.getElementsByName('mood-filter')
         let selectedRadio
         if(radios){

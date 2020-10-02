@@ -27,6 +27,7 @@ export const saveEntryTag = (entry, tags) => {
        })
        let promiseArray = [];
         for (let i = 0; i < newEntryTags.length; i++) {
+            debugger;
             promiseArray.push(fetch("http://localhost:8088/entrytags", {
                 method: "POST",
                 headers: {

@@ -1,207 +1,25 @@
 {
   "entries": [
     {
-      "date": "2020-09-24",
-      "concept": "testing delete",
-      "entry": "hello",
+      "date": "2020-10-09",
+      "concept": "starting clean",
+      "entry": "test tags render",
       "moodId": 3,
       "id": 1
     },
     {
-      "date": "2020-10-15",
-      "concept": "test again",
-      "entry": "hello there",
-      "moodId": 1,
+      "date": "2020-10-24",
+      "concept": "Everything seems to be working",
+      "entry": "yo yoyo",
+      "moodId": 5,
       "id": 2
     },
     {
       "date": "2020-10-09",
-      "concept": "test render",
-      "entry": "please work",
-      "moodId": 5,
+      "concept": "debug adding entry tag",
+      "entry": "okay",
+      "moodId": 1,
       "id": 3
-    },
-    {
-      "date": "2020-10-02",
-      "concept": "render now",
-      "entry": "hello hello",
-      "moodId": 3,
-      "id": 4
-    },
-    {
-      "date": "2020-10-09",
-      "concept": "See now",
-      "entry": "please don't break",
-      "moodId": 1,
-      "id": 5
-    },
-    {
-      "date": "2020-10-08",
-      "concept": "debug render",
-      "entry": "hello hello",
-      "moodId": 3,
-      "id": 6
-    },
-    {
-      "date": "2020-10-16",
-      "concept": "test save",
-      "entry": "hello",
-      "moodId": 4,
-      "id": 7
-    },
-    {
-      "date": "2020-10-09",
-      "concept": "testing save/render",
-      "entry": "yo yo",
-      "moodId": 3,
-      "id": 8
-    },
-    {
-      "date": "2020-10-03",
-      "concept": "work dammit",
-      "entry": "yo yo yo",
-      "moodId": 5,
-      "id": 9
-    },
-    {
-      "date": "2020-10-15",
-      "concept": "blah blah blah",
-      "entry": "asdfnweiufn",
-      "moodId": 3,
-      "id": 10
-    },
-    {
-      "date": "2020-10-09",
-      "concept": "promise",
-      "entry": "cool beans",
-      "moodId": 2,
-      "id": 11
-    },
-    {
-      "date": "2020-10-08",
-      "concept": "promise again",
-      "entry": "hello there",
-      "moodId": 2,
-      "id": 12
-    },
-    {
-      "date": "2020-10-10",
-      "concept": "tesing promise",
-      "entry": "yo yo yo",
-      "moodId": 3,
-      "id": 13
-    },
-    {
-      "date": "2020-10-09",
-      "concept": "check tags",
-      "entry": "random",
-      "moodId": 3,
-      "id": 14
-    },
-    {
-      "date": "2020-10-10",
-      "concept": "tags render",
-      "entry": "hello",
-      "moodId": 1,
-      "id": 15
-    },
-    {
-      "date": "2020-10-17",
-      "concept": "multiple tags",
-      "entry": "check check",
-      "moodId": 1,
-      "id": 16
-    },
-    {
-      "date": "2020-10-09",
-      "concept": "check values",
-      "entry": "blah blah",
-      "moodId": 3,
-      "id": 17
-    },
-    {
-      "date": "2020-10-17",
-      "concept": "debug saveEntryTag",
-      "entry": "yo hello",
-      "moodId": 3,
-      "id": 18
-    },
-    {
-      "date": "2020-10-16",
-      "concept": "test promise again",
-      "entry": "unique entry",
-      "moodId": 3,
-      "id": 19
-    },
-    {
-      "date": "2020-10-15",
-      "concept": "check values",
-      "entry": "values are cool",
-      "moodId": 3,
-      "id": 20
-    },
-    {
-      "date": "2020-10-08",
-      "concept": "checking saved Tags",
-      "entry": "testin testing 123",
-      "moodId": 3,
-      "id": 21
-    },
-    {
-      "date": "2020-10-16",
-      "concept": "Please work my guy",
-      "entry": "yo yo yo",
-      "moodId": 3,
-      "id": 22
-    },
-    {
-      "date": "2020-10-17",
-      "concept": "looking at entryId",
-      "entry": "cool cool cool",
-      "moodId": 3,
-      "id": 23
-    },
-    {
-      "date": "2020-10-17",
-      "concept": "checking saved values",
-      "entry": "totes mcgoats",
-      "moodId": 3,
-      "id": 24
-    },
-    {
-      "date": "2020-10-10",
-      "concept": "savedTagObjects",
-      "entry": "blah blah blah",
-      "moodId": 3,
-      "id": 25
-    },
-    {
-      "date": "2020-10-15",
-      "concept": "saving tags",
-      "entry": "yo yo",
-      "moodId": 3,
-      "id": 26
-    },
-    {
-      "date": "2020-10-10",
-      "concept": "creating entryTags",
-      "entry": "cool cool cool",
-      "moodId": 3,
-      "id": 27
-    },
-    {
-      "date": "2020-10-09",
-      "concept": "try again",
-      "entry": "cool world was underrated",
-      "moodId": 1,
-      "id": 28
-    },
-    {
-      "date": "2020-10-10",
-      "concept": "testing save entrytags",
-      "entry": "hello there",
-      "moodId": 3,
-      "id": 29
     }
   ],
   "moods": [
@@ -280,181 +98,77 @@
       "id": 13
     },
     {
-      "subject": "check1",
+      "subject": "special",
       "id": 14
     },
     {
-      "subject": "check2",
+      "subject": "very",
       "id": 15
     },
     {
-      "subject": "check3",
+      "subject": "paste",
       "id": 16
     },
     {
-      "subject": "test",
+      "subject": "it",
       "id": 17
-    },
-    {
-      "subject": "totally",
-      "id": 18
-    },
-    {
-      "subject": "cool",
-      "id": 19
-    },
-    {
-      "subject": "this",
-      "id": 20
-    },
-    {
-      "subject": "is",
-      "id": 21
-    },
-    {
-      "subject": "mommy",
-      "id": 22
-    },
-    {
-      "subject": "testingTag",
-      "id": 23
-    },
-    {
-      "subject": "check5",
-      "id": 24
-    },
-    {
-      "subject": "please",
-      "id": 25
-    },
-    {
-      "subject": "show",
-      "id": 26
-    },
-    {
-      "subject": "up",
-      "id": 27
-    },
-    {
-      "subject": "blah",
-      "id": 28
-    },
-    {
-      "subject": "yo",
-      "id": 29
-    },
-    {
-      "subject": "there",
-      "id": 30
-    },
-    {
-      "subject": "because",
-      "id": 31
-    },
-    {
-      "subject": "woo",
-      "id": 32
-    },
-    {
-      "subject": "happy",
-      "id": 33
-    },
-    {
-      "subject": "daddy",
-      "id": 34
-    },
-    {
-      "subject": "tag",
-      "id": 35
-    },
-    {
-      "subject": "for",
-      "id": 36
-    },
-    {
-      "subject": "the",
-      "id": 37
-    },
-    {
-      "subject": "memories",
-      "id": 38
     }
   ],
   "entrytags": [
     {
       "entryId": 1,
-      "tagId": 1,
+      "tagId": 7,
       "id": 1
     },
     {
-      "entryId": 2,
-      "tagId": 2,
+      "entryId": 1,
+      "tagId": 10,
       "id": 2
     },
     {
-      "entryId": 3,
-      "tagId": 7,
+      "entryId": 1,
+      "tagId": 12,
       "id": 3
     },
     {
-      "entryId": 3,
-      "tagId": 8,
+      "entryId": 1,
+      "tagId": 13,
       "id": 4
     },
     {
-      "entryId": 4,
-      "tagId": 6,
+      "entryId": 1,
+      "tagId": 15,
       "id": 5
     },
     {
-      "entryId": 4,
-      "tagId": 3,
+      "entryId": 2,
+      "tagId": 5,
       "id": 6
     },
     {
-      "entryId": 5,
-      "tagId": 3,
+      "entryId": 2,
+      "tagId": 9,
       "id": 7
     },
     {
-      "entryId": 5,
-      "tagId": 5,
+      "entryId": 2,
+      "tagId": 10,
       "id": 8
     },
     {
-      "entryId": 5,
-      "tagId": 12,
+      "entryId": 3,
+      "tagId": 1,
       "id": 9
     },
     {
-      "entryId": 6,
-      "tagId": 9,
+      "entryId": 3,
+      "tagId": 16,
       "id": 10
     },
     {
-      "entryId": 29,
-      "tagId": 1,
+      "entryId": 3,
+      "tagId": 17,
       "id": 11
-    },
-    {
-      "entryId": 29,
-      "tagId": 35,
-      "id": 12
-    },
-    {
-      "entryId": 29,
-      "tagId": 36,
-      "id": 13
-    },
-    {
-      "entryId": 29,
-      "tagId": 37,
-      "id": 14
-    },
-    {
-      "entryId": 29,
-      "tagId": 38,
-      "id": 15
     }
   ]
 }
